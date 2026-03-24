@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sistema de leitura de idade </title>
+</head>
+<body>
+
+    <h1> Sistema de leitura de idade </h1>
+
+    <script>
+        //Entendendo a lógica por trá do exercicios 
+        //O que está sendo pedido para mim? - Preciso criar um sisteminha que contabiliza uma idade, ex; 3 anos - em anos, meses e dias.
+        //Nesse caso já tenho as variaveis que posso usar 
+
+
+        let mes 
+        let ano
+        let dia 
+        
+        
+
+        //variaveis definidas precisamos dar um jeito do usuario poder guardar seus dados nas variaveis
+        // Lembrando que o parseFloat transforma uma string em um valor numerico
+
+        ano = parseFloat(prompt("Digite quantos anos você tem: " + ano))
+
+        mes = parseFloat(prompt("Quantos meses? : " + mes ))
+        dia = parseFloat(prompt("E quantos dias?: " + dia));
+
+        let valor_final = (ano * 365) + (mes * 30) + dia
+
+        alert("O valor final obtido é igual à: " + valor_final);
+
+    </script>
+
+</body>
+</html>
