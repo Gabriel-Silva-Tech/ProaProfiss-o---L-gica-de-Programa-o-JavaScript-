@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercício 04: Valores descrecentes </title>
+</head>
+<body>
+    <h1> Valores crescentes </h1>
+    <script>
+        document.write("Veja abaixo os valores em ordem crescente : ")
+        let A = parseFloat(prompt("Atribua um valor a letra A: "))
+        let B = parseFloat(prompt("Atribua um valor a letra B: "))
+        let C = parseFloat(prompt("Atribua um valor a letra C: "));
+
+        // tentar encontrar o maior deles 
+
+        //nesse caso o A é maior
+        if( A >= B && A >= C){
+            
+    
+         if (B >= C){
+            document.write(" <br> A ordem crescente é: " + A ,", " + B + ", " + C);
+
+            } 
+            
+            else{
+                document.write(" <br> A ordem crescente é: " + A ,", " + C + ", " + B);
+         }
+
+        }
+        
+        else if (B >= A && B >= C) {
+        }
+
+            if(A >= C) {
+                document.write(" <br> A ordem crescente é: " + B, ", " + A + ", " + C);
+
+            }
+
+            else{
+                 document.write(" <br> A ordem crescente é: " + B ,", " + C + ", " + A);
+
+            }
+
+            if (A >= B){
+
+                  document.write(" <br> A ordem crescente é: " + C ,", " + A + ", " + B);
+        }
+
+        if(A>= B){
+                 document.write("<br> A ordem crescente é: " + C ,", " + B + ", " + A);
+
+        }
+    
+        
+    </script>
+</body>
+</html>

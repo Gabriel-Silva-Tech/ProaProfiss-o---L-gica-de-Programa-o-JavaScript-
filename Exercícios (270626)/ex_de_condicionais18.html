@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 18: Pessoa mais nova</title>
+</head>
+<body>
+    <h1> Quem é a pessoa mais nova </h1>
+
+    <script>
+        let youngestAge = Infinity;
+        let youngestName = "";
+
+        for (let i = 1; i <= 10; i++) {
+            let name = prompt(`Digite o nome da pessoa ${i}:`);
+            let age = parseInt(prompt(`Digite a idade da pessoa ${i}:`));
+            if (age < youngestAge) {
+                youngestAge = age;
+                youngestName = name;
+            }
+        }
+
+        document.write(`<p>A pessoa mais nova é: ${youngestName}</p>`);
+    </script>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercício 1: Contador de calorias </title>
+</head>
+<body>
+    
+    <h1>Contador de calorias </h1>
+
+    <script>
+
+        let calorias = 0 
+
+        let tipo1_vege = 180
+        let tipo2_peixe = 230
+        let tipo3_frango = 250
+        let tipo4_carne= 350
+
+        let tipo_prato = parseFloat(prompt("Qual prato foi consumido? ")) //Não se esqueça de que é necessario armazenar o código dentro de uma variavel para funcionar. 
+        document.write("<Calorias consumidadas>")
+
+          switch( tipo_prato){
+
+            case 1: 
+                calorias = calorias + tipo1_vege
+                document.write("Você consgumiu: " + calorias + " calorias")
+            break 
+
+            case 2: 
+                calorias = calorias + tipo2_peixe
+                 document.write("Você consgumiu: " + calorias + " calorias")
+            break
+
+            case 3:
+                  calorias = calorias + tipo3_frango
+                 document.write("Você consgumiu: " + calorias + " calorias")
+            break
+
+              case 4:
+                  calorias = calorias + tipo4_carne
+                 document.write("Você consgumiu: " + calorias + " calorias")
+            break
+        }
+
+
+        let tipo_sobremesa = parseFloat(prompt("Qual sobremesa foi consumido? ")) //Não se esqueça de que é necessario armazenar o código dentro de uma variavel para funcionar. 
+        document.write("<Calorias consumidadas>")
+
+        let sobremesa1_abacaxi = 75 
+        let sobremesa2_sorvete = 110
+        let sobremesa3_mouse = 170
+        let sobremesa4_mouse_chocolate = 200
+
+          switch(tipo_sobremesa){
+            
+
+             case 1: 
+                calorias = calorias + sobremesa1_abacaxi
+                document.write(" <br> Você consgumiu: " + calorias + " calorias")
+            break 
+
+            case 2: 
+                calorias = calorias + sobremesa2_sorvete
+                 document.write(" <br> Você consgumiu: " + calorias + " calorias")
+            break
+
+            case 3:
+                  calorias = calorias + sobremesa3_mouse
+                 document.write(" <br> Você consgumiu: " + calorias + "calorias")
+            break
+
+              case 4:
+                  calorias = calorias + sobremesa4_mouse_chocolate
+                 document.write(" <br> Você consgumiu: " + calorias + " calorias")
+            break
+            
+        }
+        
+         let tipo_bebida = parseFloat(prompt("Qual bebida foi consumido? ")) //Não se esqueça de que é necessario armazenar o código dentro de uma variavel para funcionar. 
+        document.write("<Calorias consumidadas>")
+
+        let bebiba1_cha = 20
+        let bebida2_suco_laranja = 70 
+        let bebida3_suco_Melao = 100
+        let bebida4_refrigerente = 65
+
+          switch(tipo_bebida){
+            
+                case 1: 
+                calorias = calorias + bebiba1_cha
+                document.write(" <br> Você consgumiu: " + caloria + " calorias")
+            break 
+
+            case 2: 
+                calorias = calorias + bebida2_suco_laranja
+                 document.write(" <br> Você consgumiu: " + calorias + " calorias")
+            break
+
+            case 3:
+                  calorias = calorias + bebida3_suco_Melao
+                 document.write(" <br> Você consgumiu: " + calorias + " calorias")
+            break
+
+              case 4:
+                  calorias = calorias + bebida4_refrigerente
+                 document.write(" <br> Você consgumiu: " + calorias + " calorias")
+            break
+        }
+
+    </script>
+
+</body>
+</html>

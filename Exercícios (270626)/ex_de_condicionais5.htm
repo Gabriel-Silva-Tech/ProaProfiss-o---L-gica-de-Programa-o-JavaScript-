@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 05: Estado Eleitoral </title>
+</head>
+<body>
+    <h1> Estado Eleitoral </h1>
+    <script>
+
+        document.write("Seja bem vindo ao site do gov! <br> Veja seu estado eleitoral abaixo: ");
+        let idade = parseInt(prompt("Qual é a sua idade"));
+
+        if (idade < 16){
+            document.write("Você [não é eleitor]")
+        }
+
+        else if(idade >= 16 && idade <= 17) {
+            document.write("Você [pode ser eleitor]")
+        }
+
+        else if (idade >= 18 && idade <= 65){
+            document.write("Você é [eleitor]")
+        }
+
+        else if (idade > 65){
+            document.write("Você é [eleitor facultativo]")
+        }
+
+    </script>
+</body>
+</html>

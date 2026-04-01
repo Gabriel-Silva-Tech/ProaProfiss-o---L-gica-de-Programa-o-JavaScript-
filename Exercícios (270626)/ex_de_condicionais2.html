@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercício 2: Calculo por divisiveis por 10, 5 e 2 </title>
+</head>
+<body>
+    <h1> Calculadora que divide por 10, 5 e 2 </h1>
+
+    <script>
+
+        ("Digite um valor abaixo que seja divisivel por [10] [5] [2]: <br>")
+         
+        let valor_digitado = parseFloat(prompt("Digite um valor: "));  
+
+        if(valor_digitado % 10 == 0){
+
+            document.write("O número digitado " + valor_digitado + " é divisivel por 10")
+        }
+        
+        else if(valor_digitado % 5 == 0){
+
+            document.write("O número digitado " + valor_digitado + " é divisivel por 5")
+        }
+
+        else if(valor_digitado % 2 == 0){
+           document.write("O número digitado " + valor_digitado + " é divisivel por 2")
+        }
+
+        else {
+             document.write(" Valor não divisivel por nenhum dos valores")
+        }
+
+    </script>
+
+</body>
+</html>

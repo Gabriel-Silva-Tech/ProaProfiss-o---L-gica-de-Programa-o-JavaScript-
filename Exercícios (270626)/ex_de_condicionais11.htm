@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 11: Calculo de comissão </title>
+</head>
+<body>
+    <h1> Calculo de comissão </h1>
+
+    <script>
+
+        let nome = prompt("Qual é o seu nome? ")
+        let salario = parseFloat(prompt("Quanto é o seu salario? "))
+        let vendas = parseFloat(prompt("Quantas vendas você realizou no ultimo mês? "))
+        let comissao = vendas * 0.15
+        let salario_final = salario + comissao
+
+       document.write("Vendedor: " + nome + "<br>")
+       document.write("O salario fixo é R$ " + salario.toFixed(2))
+       document.write("O salario final + 15% é igua a: R$ " + salario_final.toFixed(2))
+
+    </script>
+</body>
+</html>

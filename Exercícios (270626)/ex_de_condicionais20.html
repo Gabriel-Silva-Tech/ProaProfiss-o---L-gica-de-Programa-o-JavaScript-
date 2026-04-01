@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 20: Contar números maiores que 8</title>
+</head>
+<body>
+    <h1>Exercício 20: Contar números maiores que 8</h1>
+
+
+    <script>
+            let contador = 0;
+            for (let i = 1; i <= 20; i++) {
+                let numero = parseFloat(prompt("Digite o número:"));
+                if (numero > 8) {
+                    contador++;
+                }
+            }
+            document.write("Quantidade de números maiores que 8: " + contador);
+    </script>
+</body>
+</html>

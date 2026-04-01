@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 03: CEF </title>
+</head>
+<body>
+    <h1> Crédito Especial </h1>
+    <script>
+        
+        let Porcentagem = 0.02 // 0.02 = 2% e tmabém não devo usar no JS numeros com virgula e sim com ponto.
+        let saldo_medio
+        let credito 
+
+        let saldo = parseFloat(prompt("Digite o valor do seu saldo: "))
+
+        if(saldo > 501 && 1000){
+            credito = saldo * 0.30
+            document.write("O valor do crédito especial é " + credito)
+        }
+
+        else if(saldo > 1001 && 3000){
+            credito = saldo * 0.40
+            document.write(" <br> O valor do credito especial é " + credito)
+        }
+
+        else if (saldo > 3001){
+            credito = saldo * 0.50
+            document.write(" <br> O valor do credito especial é " + credito)
+        }
+
+        document.write(" <br> O saldo médio é igual á " + saldo)
+
+    </script>
+</body>
+</html>
