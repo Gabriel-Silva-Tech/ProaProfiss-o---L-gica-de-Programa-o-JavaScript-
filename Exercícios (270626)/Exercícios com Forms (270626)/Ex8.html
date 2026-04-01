@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Escolha de Combustível</title>
+</head>
+<body>
+    <h1> Exercício 08:Comparação de Preços de Combustível</h1>
+    <script>
+        
+        let nome = prompt("Nome do funcionário:");
+
+        let alcool_wayne = parseFloat(prompt("Qual o valor do álcool no posto Wayne Oil?"));
+
+        let gasolina_wayne = parseFloat(prompt("Qual o valor da gasolina no posto Wayne Oil?"));
+
+        let alcool_stark = parseFloat(prompt("Qual o valor do álcool no posto Stark Petrol?"));
+
+        let gasolina_stark = parseFloat(prompt("Qual o valor da gasolina no posto Stark Petrol?"));
+
+        if (isNaN(alcool_wayne) || isNaN(gasolina_wayne) || isNaN(alcool_stark) || isNaN(gasolina_stark)) {
+
+            alert("Valores inválidos");
+
+        } else {
+            let chosen_wayne, custo_wayne;
+            if (alcool_wayne <= gasolina_wayne * 0.7) {
+                chosen_wayne = "álcool";
+                custo_wayne = alcool_wayne * 42;
+
+            } else {
+                chosen_wayne = "gasolina";
+                custo_wayne = gasolina_wayne * 42;
+            }
+
+            let chosen_stark, custo_stark;
+            if (alcool_stark <= gasolina_stark * 0.7) {
+                chosen_stark = "álcool";
+                custo_stark = alcool_stark * 42;
+
+            } else {
+                chosen_stark = "gasolina";
+                custo_stark = gasolina_stark * 42;
+            }
+
+            let posto, combustivel;
+            if (custo_wayne <= custo_stark) {
+                posto = "Wayne Oil";
+                combustivel = chosen_wayne;
+
+            } else {
+                posto = "Stark Petrol";
+                combustivel = chosen_stark;
+            }
+
+            alert(nome + ", é mais barato abastecer com " + combustivel + " no posto " + posto);
+        }
+    </script>
+</body>
+</html>

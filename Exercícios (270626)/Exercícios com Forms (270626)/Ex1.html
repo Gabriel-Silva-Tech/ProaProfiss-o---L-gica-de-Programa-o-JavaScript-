@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Reserva de Hotel</title>
+</head>
+<body>
+    <h1> Exercício 01: Sistema de Reserva de Hotel</h1>
+    <script>
+
+        while (true) {
+            
+            let valor_diaria = prompt("Informe o valor da diária:");
+
+            valor_diaria = parseFloat(valor_diaria);
+
+            if (valor_diaria <= 0) {
+
+                alert("Valor Inválido");
+                continue;
+            }
+
+            let dias = prompt("Informe a quantidade de dias de hospedagem:");
+
+            dias = parseInt(dias);
+
+            if (dias <= 0 || dias > 30) {
+
+                alert("Valor Inválido");
+                continue;
+            }
+
+            let nome = prompt("Informe o nome do hóspede:");
+
+            if (nome == "") {
+
+                alert("Nome inválido");
+                continue;
+            }
+
+            let confirmacao = prompt("Confirma a reserva? (s/n)");
+
+            if (confirmacao == 's') {
+
+                alert("Reserva confirmada para " + nome + " por " + dias + " dias. Total: R$ " + (valor_diaria * dias));
+                break;
+            }
+        }
+
+    </script>
+</body>
+</html>

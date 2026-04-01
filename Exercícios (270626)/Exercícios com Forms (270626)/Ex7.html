@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Reserva de Restaurante</title>
+</head>
+<body>
+    <h1> Exercício 07: Verificação de Disponibilidade do Restaurante</h1>
+    <script>
+        
+        let dia = prompt("Qual o dia do seu evento?").toLowerCase();
+
+        let hora = parseInt(prompt("Qual a hora do seu evento?"));
+
+        if (isNaN(hora)) {
+            alert("Hora inválida");
+
+        } else {
+            let  disponivel = false;
+
+            if (dia === "segunda" || dia === "terca" || dia === "quarta" || dia === "quinta" ||
+             dia === "sexta") {
+
+                if (hora >= 7 && hora <= 23) {
+                    disponivel = true;
+                }
+
+            } else if (dia === "sabado" || dia === "domingo") {
+                if (hora >= 7 && hora <= 15) {
+                    disponivel = true;
+                }
+            }
+
+            if (disponivel) {
+                let empresa = prompt("Qual o nome da empresa?");
+
+                alert("Restaurante reservado para " + empresa + ": " + dia + " às " + hora + "hs");
+
+            } else {
+                alert("Restaurante indisponível");
+            }
+        }
+    </script>
+</body>
+</html>

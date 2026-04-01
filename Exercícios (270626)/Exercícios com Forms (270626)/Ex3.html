@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro e Pesquisa de Hóspedes</title>
+</head>
+<body>
+    <h1> Exercício 03: Cadastro e Pesquisa de Hóspedes</h1>
+
+    <script>
+
+        let hospede1 = "";
+
+        let hospede2 = "";
+
+        let hospede3 = "";
+        
+        let quantidade = 0;
+
+        while (true) {
+
+            let opcao = prompt("Menu:\n1- Cadastrar\n2- Pesquisar\n3- Sair");
+            if (opcao === "1") {
+
+                if (quantidade >= 3) {
+                    alert("Máximo de cadastros atingido");
+                } 
+                
+                else {
+                    let nome = prompt("Nome do hóspede:");
+
+                    if (nome && nome.trim() !== "") {
+                        if (quantidade === 0) {
+                            hospede1 = nome;
+
+                        } else if (quantidade === 1) {
+                            hospede2 = nome;
+
+                        } else if (quantidade === 2) {
+                            hospede3 = nome;
+                        }
+                        quantidade++;
+
+                        alert("Cadastrado com sucesso");
+
+                    } 
+                    
+                    else {
+                        alert("Nome inválido");
+                    }
+                }
+
+
+            } else if (opcao === "2") {
+                let nome = prompt("Nome para pesquisar:");
+                
+                if (nome === hospede1 || nome === hospede2 || nome === hospede3) {
+                    alert("Hospede " + nome + " foi encontrado");
+                } 
+                
+                else {
+                    alert("Hóspede não encontrado");
+                }
+
+            } else if (opcao === "3") {
+                break;
+
+            } else {
+                alert("Opção inválida");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Orçamento de Manutenção de Ar Condicionado</title>
+</head>
+<body>
+    <h1> Exercício 09: Cálculo de Orçamentos para Manutenção</h1>
+    <script>
+
+        let nome = prompt("Nome do usuário:");
+
+        let empresa1 = "";
+
+        let empresa2 = "";
+
+        let empresa3 = "";
+
+        let custo1 = 0;
+
+        let custo2 = 0;
+
+        let custo3 = 0;
+
+        let quantidade_empresas = 0;
+
+        do {
+            if (quantidade_empresas >= 3) {
+                alert("Máximo de 3 empresas atingido");
+                break;
+            }
+
+            let empresa = prompt("Qual o nome da empresa?");
+
+            let valor = parseFloat(prompt("Qual o valor por aparelho?"));
+
+            let quantidade = parseInt(prompt("Qual a quantidade de aparelhos?"));
+
+            let desconto = parseFloat(prompt("Qual a porcentagem de desconto?"));
+
+            let min = parseInt(prompt("Qual o número mínimo de aparelhos para conseguir o desconto?"));
+
+
+            if (isNaN(valor) || isNaN(quantidade) || isNaN(desconto) || isNaN(min) || valor < 0 || quantidade < 0 || desconto < 0 || min < 0) {
+                alert("Valores inválidos");
+                continue;
+            }
+
+            let total = valor * quantidade;
+            if (quantidade >= min) {
+                total = total * (1 - desconto / 100);
+            }
+
+            alert("O serviço de " + empresa + " custará R$ " + total.toFixed(1));
+
+            if (quantidade_empresas === 0) {
+                empresa1 = empresa;
+                custo1 = total;
+
+            } else if (quantidade_empresas === 1) {
+                empresa2 = empresa;
+                custo2 = total;
+
+            } else if (quantidade_empresas === 2) {
+                empresa3 = empresa;
+                custo3 = total;
+            }
+
+            quantidade_empresas++;
+
+            let continuar = prompt("Deseja informar novos dados, " + nome + "? (S/N)");
+
+        } while (continuar && continuar.toUpperCase() === "S");
+
+        if (quantidade_empresas >= 2) {
+            let menor_custo = custo1;
+
+            let empresa_menor = empresa1;
+
+            if (custo2 < menor_custo) {
+                menor_custo = custo2;
+
+                empresa_menor = empresa2;
+            }
+
+            if (quantidade_empresas >= 3 && custo3 < menor_custo) {
+                menor_custo = custo3;
+                
+                empresa_menor = empresa3;
+            }
+
+            alert("O orçamento de menor valor é o de " + empresa_menor + " por R$ " + menor_custo.toFixed(1));
+
+        } else {
+
+            alert("Pelo menos duas empresas são necessárias");
+        }
+
+    </script>
+</body>
+</html>

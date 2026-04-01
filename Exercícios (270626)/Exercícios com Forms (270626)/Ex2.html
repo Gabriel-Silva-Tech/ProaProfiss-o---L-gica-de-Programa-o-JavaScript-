@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title> Exercício 02: Cadastro de Hóspedes</title>
+</head>
+<body>
+    <h1> Exercício 02: Cadastro de Hóspedes do Hotel</h1>
+    <script>
+
+        let diaria = parseFloat(prompt("Informe o valor padrão da diária:"));
+
+        if (diaria <= 0) {
+            alert("Valor inválido para diária");
+        } 
+        
+        else {
+
+            let gratuidades = 0;
+            let meias = 0;
+            let total = 0;
+
+            while (true) {
+
+                let nome = prompt("Nome do hóspede (digite PARE para parar):");
+                if (nome == "PARE") {
+                    break;
+                }
+
+                let idade = parseInt(prompt("Idade de " + nome + ":"));
+                if (idade <= 0) {
+
+                    alert("Idade inválida");
+                    continue;
+                }
+
+                if (idade < 6) {
+                    alert(nome + " possui gratuidade");
+                    gratuidades++;
+
+                } else if (idade > 60) {
+                    alert(nome + " paga meia");
+                    meias++;
+                    total += diaria / 2;
+
+                } 
+                
+                else {
+                    total += diaria;
+                }
+            }
+            
+            document.write("Gratuidades: " + gratuidades + "<br>Meias hospedagens: " + meias + "<br>Valor total: R$ " + total.toFixed(2));
+        }
+
+    </script>
+</body>
+</html>

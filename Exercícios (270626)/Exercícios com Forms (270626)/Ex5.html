@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Buffet do Hotel para Evento</title>
+</head>
+<body>
+    <h1> Exercício 05: Cálculo de Buffet para Evento</h1>
+    <script>
+        let convidados = parseInt(prompt("Qual o número de convidados para o evento?"));
+
+        if (isNaN(convidados) || convidados < 0) {
+            alert("Número inválido");
+
+        } else if (convidados > 350) {
+            alert("Quantidade de convidados superior à capacidade máxima");
+
+        } else {
+            let cafe = convidados * 0.2;
+            
+            let agua = convidados * 0.5;
+
+            let salgados = convidados * 7;
+
+            let custo_cafe = cafe * 0.80;
+
+            let custo_agua = agua * 0.40;
+
+            let custo_salgados = salgados * (34 / 100);
+
+            let total = custo_cafe + custo_agua + custo_salgados;
+
+            alert("O evento precisará de " + cafe + " litros de café, " + agua + " litros de água, " + salgados + " salgados. O custo total do evento será de R$ " + total.toFixed(2));
+
+            let aceita = prompt("Aceita os valores? (SIM/NÃO)");
+
+            if (aceita && aceita.toUpperCase() === "SIM") {
+
+                alert("Reserva efetuada com sucesso");
+                
+            } else {
+                alert("Reserva não efetuada");
+            }
+        }
+    </script>
+</body>
+</html>

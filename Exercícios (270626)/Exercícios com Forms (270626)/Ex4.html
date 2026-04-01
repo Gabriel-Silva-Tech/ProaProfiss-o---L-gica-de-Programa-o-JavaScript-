@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contratação de Garçons para Evento</title>
+</head>
+<body>
+    <h1> Exercício 04: Contratação de Garçons para Evento</h1>
+    <script>
+
+        let garçons = parseInt(prompt("Número de garçons necessários:"));
+
+        let horas = parseFloat(prompt("Total de horas do evento:"));
+
+        if (isNaN(garçons) || garçons < 0 || isNaN(horas) || horas < 0) {
+            alert("Valores inválidos");
+
+        } else {
+            let custo = garçons * horas * 10.50;
+            alert("Custo total: R$ " + custo.toFixed(2));
+
+            let aceita = prompt("Aceita os valores? (S/N)");
+
+            if (aceita && aceita.toUpperCase() === "S") {
+                alert("Reserva efetuada com sucesso");
+            } else {
+                alert("Reserva não efetuada");
+            }
+        }
+
+    </script>
+</body>
+</html>
