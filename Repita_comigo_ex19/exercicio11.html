@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11: Contagem de valores</title>
+</head>
+<body>
+    <h1>Contagem de valores entre 24 e 42</h1>
+    <script>
+        let entre = 0;
+        let fora = 0;
+
+        for (let i = 1; i <= 10; i++) {
+
+            let valor = parseFloat(prompt("Digite o " + i + "° valor:"));
+
+            if (valor >= 24 && valor <= 42) {
+
+                entre++;
+
+            } else {
+                
+                fora++;
+            }
+        }
+        document.write("Valores entre 24 e 42: " + entre + "<br>");
+
+        document.write("Valores fora do intervalo: " + fora + "<br>");
+    </script>
+</body>
+</html>
